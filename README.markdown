@@ -38,6 +38,8 @@ Nos objectifs globaux sont la clarté, la cohérence et la brièveté, dans cet 
   * [Inférence de type](#inférence-de-type)
   * [Sucre syntaxique](#sucre-syntaxique)
 * [Fonctions vs Méthodes](#fonctions-vs-méthodes)
+* [Design Patterns](#design-patterns)
+  * [Factory](#factory)
 * [Gestion de la mémoire](#gestion-de-la-mémoire)
   * [Extension de la durée de vie de l'objet](#prolonger-la-durée-de-vie-de-lobjet)
 * [Contrôle d'accès](#contrôle-daccès)
@@ -833,6 +835,14 @@ launch(&rocket)
 let tuples = zip(a, b)  // se sent naturel en tant que fonction libre (symétrie)
 let value = max(x, y, z)  // une autre fonction libre qui semble naturelle
 ```
+
+## Design patterns
+
+### Factory
+
+Débuter le nom des méthodes de création avec "make". ex. `x.makeIterator()`
+
+[Référence](https://www.swift.org/documentation/api-design-guidelines/)
 
 ## Gestion de la mémoire
 
