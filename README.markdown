@@ -194,6 +194,8 @@ let colour = "red"
 
 Utilisez des extensions pour organiser votre code en blocs logiques de fonctionnalités. Chaque extension doit être précédée d'un commentaire `// MARK: -` pour maintenir une bonne organisation.
 
+Dans un soucis de lisibilité, les balises `// MARK: -` devraient toujours être précédé et suivi d'une ligne vide à l'exception des endroits où elles sont précédé d'une déclaration de classe.
+
 ### Conformité aux protocoles
 
 En particulier, lors de l'ajout de la conformité à un protocole pour un modèle, il est préférable d'ajouter une extension séparée pour les méthodes du protocole. Cela permet de regrouper les méthodes associées au protocole et peut simplifier les instructions pour ajouter un protocole à une classe avec ses méthodes associées.
@@ -201,15 +203,19 @@ En particulier, lors de l'ajout de la conformité à un protocole pour un modèl
 **Préféré** :
 ```swift
 class MyViewController: UIViewController {
-  // du code de classe ici
+  // MARK: - Variables
+
+  private var fooBar: String
 }
 
 // MARK: - UITableViewDataSource
+
 extension MyViewController: UITableViewDataSource {
   // méthodes du protocole de la source de données de la table
 }
 
 // MARK: - UIScrollViewDelegate
+
 extension MyViewController: UIScrollViewDelegate {
   // méthodes du protocole du délégué de la vue déroulante
 }
